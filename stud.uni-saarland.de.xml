@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<clientConfig version="1.1">
+    <emailProvider id="stud.uni-saarland.de">
+      <domain>stud.uni-saarland.de</domain>
+
+      <displayName>Studenten Mail der UdS</displayName>
+      <displayShortName>UdS Mail</displayShortName>
+
+      <incomingServer type="imap">
+         <hostname>mail.stud.uni-saarland.de</hostname>
+         <port>993</port>
+         <socketType>SSL</socketType>
+         <username>%EMAILLOCALPART%</username>
+         <authentication>password-cleartext</authentication>
+      </incomingServer>
+
+      <outgoingServer type="smtp">
+         <hostname>smtp.uni-saarland.de</hostname>
+         <port>465</port>
+         <socketType>SSL</socketType> 
+         <username>%EMAILLOCALPART%</username> 
+         <authentication>password-cleartext</authentication>
+      </outgoingServer>
+
+
+      <outgoingServer type="smtp">
+         <hostname>smtp.uni-saarland.de</hostname>
+         <port>25</port>
+         <socketType>STARTTLS</socketType> 
+         <username>%EMAILLOCALPART%</username> 
+         <authentication>password-cleartext</authentication>
+      </outgoingServer>
+
+      <documentation url="https://www.hiz-saarland.de/fileadmin/user_upload/dienste/email/Konfiguration_Thunderbird_01022013.pdf">
+         <descr lang="en">Configure Thunderbird for universities htw and UdS (2013-02-01)</descr>
+         <descr lang="de">Thunderbird konfigurieren fuer die Universitaeten htw und UdS (2013-02-01)</descr>
+      </documentation>
+
+      <documentation url="https://www.hiz-saarland.de/dienste/email/">
+        <descr lang="de">Allgemeine Beschreibung der Einstellungen</descr>
+        <descr lang="en">Generic settings page</descr>
+      </documentation>
+
+    </emailProvider>
+</clientConfig>
